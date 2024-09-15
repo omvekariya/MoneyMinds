@@ -19,6 +19,11 @@ export const sidebarLinks = [
     route: "/payment-transfer",
     label: "Transfer Funds",
   },
+  {
+    imgURL: "/icons/currency-conversion.svg",
+    route: "/currency-conversion",
+    label: "Currency Conversion",
+  },
 ];
 
 // good_user / good_password - Bank of America
