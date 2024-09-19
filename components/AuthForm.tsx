@@ -92,18 +92,18 @@ const AuthForm = ({ type }: { type: string }) => {
               height={34}
               alt="MoneyMinds logo"
             />
-            <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">MoneyMinds</h1>
+            <h1 className="text-26 font-ibm-plex-serif font-bold text-white">MoneyMinds</h1>
           </Link>
 
           <div className="flex flex-col gap-1 md:gap-3">
-            <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
+            <h1 className="text-24 lg:text-36 font-semibold text-white">
               {user 
                 ? 'Link Account'
                 : type === 'sign-in'
                   ? 'Sign In'
                   : 'Sign Up'
               }
-              <p className="text-16 font-normal text-gray-600">
+              <p className="text-16 font-normal text-white">
                 {user 
                   ? 'Link your account to get started'
                   : 'Please enter your details'
@@ -158,7 +158,7 @@ const AuthForm = ({ type }: { type: string }) => {
           </Form>
 
           <footer className="flex justify-center gap-1">
-            <p className="text-14 font-normal text-gray-600">
+            <p className="text-14 font-normal text-white">
               {type === 'sign-in'
               ? "Don't have an account?"
               : "Already have an account?"}

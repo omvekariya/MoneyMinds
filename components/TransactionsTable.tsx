@@ -29,7 +29,7 @@ const CategoryBadge = ({ category }: CategoryBadgeProps) => {
 const TransactionsTable = ({ transactions }: TransactionTableProps) => {
   return (
     <Table>
-      <TableHeader className="bg-[#f9fafb]">
+      <TableHeader className="bg-gray-700 text-gray-300 rounded-sm">
         <TableRow>
           <TableHead className="px-2">Transaction</TableHead>
           <TableHead className="px-2">Amount</TableHead>
@@ -48,10 +48,10 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
           const isCredit = t.type === 'credit';
 
           return (
-            <TableRow key={t.id} className={`${isDebit || amount[0] === '-' ? 'bg-[#FFFBFA]' : 'bg-[#F6FEF9]'} !over:bg-none !border-b-DEFAULT`}>
+            <TableRow key={t.id} className={`${isDebit || amount[0] === '-' ? 'bg-[#F4433633]' : 'bg-[#4CAF5033]'} !over:bg-none !border-b-DEFAULT`}>
               <TableCell className="max-w-[250px] pl-2 pr-10">
                 <div className="flex items-center gap-3">
-                  <h1 className="text-14 truncate font-semibold text-[#344054]">
+                  <h1 className="text-14 truncate font-semibold text-gray-300">
                     {removeSpecialCharacters(t.name)}
                   </h1>
                 </div>
@@ -69,11 +69,11 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                 <CategoryBadge category={status} /> 
               </TableCell>
 
-              <TableCell className="min-w-32 pl-2 pr-10">
+              <TableCell className="min-w-32 pl-2 pr-10 text-gray-300">
                 {formatDateTime(new Date(t.date)).dateTime}
               </TableCell>
 
-              <TableCell className="pl-2 pr-10 capitalize min-w-24">
+              <TableCell className="pl-2 pr-10 capitalize min-w-24 text-gray-300">
                {t.paymentChannel}
               </TableCell>
 

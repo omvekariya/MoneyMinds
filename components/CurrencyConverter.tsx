@@ -8,14 +8,14 @@ const CurrencyConverterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f4f8;
+  background-color: rgba(17, 24, 39);
 `;
 
 const CurrencyConverterCard = styled.div`
-  background-color: #ffffff;
+  background-color: rgba(31, 41, 55);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Darker shadow */
   max-width: 400px;
   width: 100%;
   display: flex;
@@ -26,7 +26,7 @@ const CurrencyConverterCard = styled.div`
 const CurrencyConverterTitle = styled.h2`
   font-size: 24px;
   font-weight: 600;
-  color: #333;
+  color: #e0e0e0; /* Lighter text for dark background */
   text-align: center;
   margin-bottom: 20px;
 `;
@@ -39,23 +39,25 @@ const InputGroup = styled.div`
 
 const Input = styled.input`
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #333; /* Darker border */
   border-radius: 8px;
   font-size: 16px;
-  background-color: #f9f9f9;
+  background-color: rgba(17, 24, 39);
+  color: #e0e0e0; /* Light text color */
 `;
 
 const Select = styled.select`
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #333; /* Darker border */
   border-radius: 8px;
   font-size: 16px;
-  background-color: #f9f9f9;
+  background-color: rgba(17, 24, 39);
+  color: #e0e0e0; /* Light text color */
 `;
 
 const Button = styled.button`
   padding: 12px;
-  background-color: #0070f3;
+  background-color: #0070f3; /* Blue color for the button */
   color: white;
   border: none;
   border-radius: 8px;
@@ -66,12 +68,16 @@ const Button = styled.button`
   &:hover {
     background-color: #005bb5;
   }
+
+  &:disabled {
+    background-color: #333; /* Darker color when disabled */
+  }
 `;
 
 const Result = styled.p`
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: #e0e0e0; /* Lighter text */
   text-align: center;
   margin-top: 20px;
 `;
